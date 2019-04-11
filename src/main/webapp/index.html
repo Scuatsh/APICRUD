@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>API Manual</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+        <link rel="stylesheet" href="assets/css/Header-Blue.css">
+        <link rel="stylesheet" href="assets/css/Header-Dark.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+
+    <body style="margin: 5%;">
+        <h1>API CRUD MANUAL</h1>
+        <hr>
+
+        <div>
+            <h3>CREATE USER</h3>
+            <div style="width: 95%; margin: auto;">
+                <div><span><strong>METHOD</strong>&nbsp;</span></div>
+                <div><span>POST<br></span></div>
+                <div><span><strong>ENDPOINT:</strong>&nbsp;</span></div>
+                <div><span>http://localhost:8080/Backend-CRUD/v1/crudapi/createUser<br></span></div>
+                <div><span><strong>PAYLOAD:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+  <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>,
+  <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+  <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1994-12-07T00:00:00-03:00&quot;</span>,         
+  <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,  
+  <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>  
+}                </pre></div>
+
+                <div><span><strong>REQUEST:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+   <span style="color: #007700">&quot;code&quot;</span>: <span style="color: #0000DD; font-weight: bold">200</span>,
+   <span style="color: #007700">&quot;message&quot;</span>: <span style="background-color: #fff0f0">&quot;Usuario creado exitosamente&quot;</span>,
+   <span style="color: #007700">&quot;user&quot;</span>: {
+      <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1994-12-07T00:00:00-03:00&quot;</span>,
+      <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,
+      <span style="color: #007700">&quot;id&quot;</span>: <span style="color: #0000DD; font-weight: bold">0</span>,
+      <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+      <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>,
+      <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>
+   }
+}
+                    </pre></div>
+
+            </div>        
+            <hr>
+        </div>
+
+
+        <!--EDITAR USUARIO-->
+        <div>
+            <h3>EDIT USER</h3>
+            <div style="width: 95%; margin: auto;">
+                <div><span><strong>METHOD</strong>&nbsp;</span></div>
+                <div><span>POST<br></span></div>
+                <div><span><strong>ENDPOINT:</strong>&nbsp;</span></div>
+                <div><span>http://localhost:8080/Backend-CRUD/v1/crudapi/editUser<br></span></div>
+                <div><span><strong>PAYLOAD:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+  <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>,
+  <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+  <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1994-12-07T00:00:00-03:00&quot;</span>,         
+  <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,  
+  <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>  
+}                </pre></div>
+
+                <div><span><strong>REQUEST:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+   <span style="color: #007700">&quot;code&quot;</span>: <span style="color: #0000DD; font-weight: bold">200</span>,
+   <span style="color: #007700">&quot;message&quot;</span>: <span style="background-color: #fff0f0">&quot;Usuario editado exitosamente&quot;</span>,
+   <span style="color: #007700">&quot;user&quot;</span>: {
+      <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1994-12-07T00:00:00-03:00&quot;</span>,
+      <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,
+      <span style="color: #007700">&quot;id&quot;</span>: <span style="color: #0000DD; font-weight: bold">0</span>,
+      <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+      <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>,
+      <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>
+   }
+}
+                    </pre></div>
+
+            </div>        
+            <hr>
+        </div>
+
+
+
+        <!--GET USUARIO by id-->
+        <div>
+            <h3>GET USER BY ID</h3>
+            <div style="width: 95%; margin: auto;">
+                <div><span><strong>METHOD</strong>&nbsp;</span></div>
+                <div><span>POST<br></span></div>
+                <div><span><strong>ENDPOINT:</strong>&nbsp;</span></div>
+                <div><span>http://localhost:8080/Backend-CRUD/v1/crudapi/getUserById<br></span></div>
+                <div><span><strong>PAYLOAD:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+  <span style="color: #007700">&quot;Id&quot;</span>: <span style="color: #008800; font-weight: bold">1</span>  
+}                </pre></div>
+
+                <div><span><strong>REQUEST:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+   <span style="color: #007700">&quot;code&quot;</span>: <span style="color: #0000DD; font-weight: bold">200</span>,
+   <span style="color: #007700">&quot;message&quot;</span>: <span style="background-color: #fff0f0">&quot;Usuario editado exitosamente&quot;</span>,
+   <span style="color: #007700">&quot;user&quot;</span>: {
+      <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1994-12-07T00:00:00-03:00&quot;</span>,
+      <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,
+      <span style="color: #007700">&quot;id&quot;</span>: <span style="color: #0000DD; font-weight: bold">0</span>,
+      <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+      <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>,
+      <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>
+   }
+}
+                    </pre></div>
+
+            </div>        
+            <hr>
+        </div>
+
+
+        <!--GET all USUARIO-->
+        <div>
+            <h3>GET ALL USERS</h3>
+            <div style="width: 95%; margin: auto;">
+                <div><span><strong>METHOD</strong>&nbsp;</span></div>
+                <div><span>POST<br></span></div>
+                <div><span><strong>ENDPOINT:</strong>&nbsp;</span></div>
+                <div><span>http://localhost:8080/Backend-CRUD/v1/crudapi/getAllUsers<br></span></div>
+                <div><span><strong>PAYLOAD:</strong></span></div>
+                NO REQUIRED
+
+                <div><span><strong>REQUEST:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+   <span style="color: #007700">&quot;code&quot;</span>: <span style="color: #0000DD; font-weight: bold">200</span>,
+   <span style="color: #007700">&quot;message&quot;</span>: <span style="background-color: #fff0f0">&quot;Find&quot;</span>,
+   <span style="color: #007700">&quot;users&quot;</span>: [
+      {
+         <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1993-07-24T00:00:00-04:00&quot;</span>,
+         <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,
+         <span style="color: #007700">&quot;id&quot;</span>: <span style="color: #0000DD; font-weight: bold">3</span>,
+         <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+         <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>,
+         <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>
+      },
+      {
+         <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1993-07-24T00:00:00-04:00&quot;</span>,
+         <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.37222228-8&quot;</span>,
+         <span style="color: #007700">&quot;id&quot;</span>: <span style="color: #0000DD; font-weight: bold">4</span>,
+         <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero2&quot;</span>,
+         <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>,
+         <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baru2c&quot;</span>
+      }
+   ]
+}
+                    </pre></div>
+
+
+            </div>        
+            <hr>
+        </div>
+
+
+        <!--DELETE USUARIO-->
+        <div>
+            <h3>DELETE USER</h3>
+            <div style="width: 95%; margin: auto;">
+                <div><span><strong>METHOD</strong>&nbsp;</span></div>
+                <div><span>POST<br></span></div>
+                <div><span><strong>ENDPOINT:</strong>&nbsp;</span></div>
+                <div><span>http://localhost:8080/Backend-CRUD/v1/crudapi/deleteUser<br></span></div>
+                <div><span><strong>PAYLOAD:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+  <span style="color: #007700">&quot;name&quot;</span>: <span style="background-color: #fff0f0">&quot;Baruc&quot;</span>,
+  <span style="color: #007700">&quot;lastname&quot;</span>: <span style="background-color: #fff0f0">&quot;Romero&quot;</span>,
+  <span style="color: #007700">&quot;brithday&quot;</span>: <span style="background-color: #fff0f0">&quot;1994-12-07T00:00:00-03:00&quot;</span>,
+  <span style="color: #007700">&quot;id&quot;</span>: <span style="color: #0000DD; font-weight: bold">4</span>,         
+  <span style="color: #007700">&quot;dni&quot;</span>: <span style="background-color: #fff0f0">&quot;18.443.378-8&quot;</span>,  
+  <span style="color: #007700">&quot;male&quot;</span>: <span style="color: #008800; font-weight: bold">true</span>  
+}                </pre></div>
+
+                <div><span><strong>REQUEST:</strong></span></div>
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{
+   <span style="color: #007700">&quot;code&quot;</span>: <span style="color: #0000DD; font-weight: bold">200</span>,
+   <span style="color: #007700">&quot;message&quot;</span>: <span style="background-color: #fff0f0">&quot;true&quot;</span>
+}
+                    </pre></div>
+
+
+            </div>        
+            <hr>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
